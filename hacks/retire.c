@@ -10,4 +10,9 @@ int main()
     printf("enter the number of years till retirement");
     scanf("%d",&years_till_retirement);
 
+    if(initial_balance<=0 || monthly_contribution<=0 || annual_rate_of_return<=0 ||annual_rate_of_inflation<=0 || years_till_retirement<=0)
+     {
+        printf("this is an invalid information, please enter positive values\n");
+        return 1;
+     }
 }
