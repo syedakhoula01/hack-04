@@ -18,5 +18,14 @@ int main()
      double monthly_rate_of_return = annual_rate_of_return / 12.0;
      double monthly_rate_of_inflation = annual_rate_of_inflation/12.0;
      double balance = initial_balance;
-     
+
+     for(int month=1; month<= years_till_retirement * 12; month++)
+     {
+        double interest_earned = balance * monthly_rate_of_return;
+        balance += interest_earned;
+        balance /=(1+monthly_rate_of_inflation);
+
+        printf("%d %.2lf %.2lf %.2lf %.2lf %.2lf" , month , initial_balance , monthly_contribution , interest_earned , balance);
+     }
+     return 0;
 }
