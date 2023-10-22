@@ -15,4 +15,8 @@ int main()
         printf("this is an invalid information, please enter positive values\n");
         return 1;
      }
+     double monthly_rate_of_return = annual_rate_of_return / 12.0;
+     double monthly_rate_of_inflation = annual_rate_of_inflation/12.0;
+     double balance = initial_balance;
+     
 }
